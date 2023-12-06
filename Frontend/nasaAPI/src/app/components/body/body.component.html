@@ -1,0 +1,9 @@
+<body>
+  <form #formDirective="ngForm" [formGroup]="form" (ngSubmit)="reset(form.value)">
+    <input type="number" formControlName="page" required>
+    <button type="submit">GET ASTEROIDS</button>
+  </form>
+
+
+  <div>{{bodyString}}</div>
+</body>
