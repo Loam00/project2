@@ -1,0 +1,12 @@
+body {
+  background: url('space.jpeg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  top: 0;
+  background-attachment: fixed;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

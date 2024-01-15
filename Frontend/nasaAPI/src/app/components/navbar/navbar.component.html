@@ -1,0 +1,19 @@
+<div class="navbar">
+
+  <div class="logo">
+
+  </div>
+
+  <div style="display: flex;">
+    <a class="navbar-link"  *ngFor="let item of navData" [routerLink]="item.routeLink"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact:true}"
+    >
+      <i [class]="item.icon"></i>
+      <span>{{item.label}}</span>
+    </a>
+  </div>
+
+
+
+</div>

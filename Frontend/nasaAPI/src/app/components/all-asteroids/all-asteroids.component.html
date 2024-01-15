@@ -1,0 +1,35 @@
+
+  <div class="container" *ngIf="check">
+    <div *ngFor="let item of asteroid; index as itemNumber">
+
+      <div class="asteroidName" (click)="openAsteroid(item)" [ngClass]="item.displayAsteroid ? 'asteroidNameOpened' : '' ">
+        <div class="asteroidHeader">
+          <span>{{item.name}}</span>
+          <span># {{(itemNumber + 1) + index*20}}</span>
+        </div>
+
+        <div class="displayAsteroid" *ngIf="item.displayAsteroid">
+          <div >
+            <div>Id: <span>{{item.neo_reference_id}}</span></div>
+            <div>Orbit class: <span>{{item.orbit_class_type}}</span></div>
+            <div>Absolute Magnitude (H): <span>{{item.absolute_magnitude_h}}</span></div>
+            <div>Diameter: (min: <span>{{item.estimated_diameter_min_km}} km</span>, max: <span>{{item.estimated_diameter_max_km}} km</span>)</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <button class="btn-prev" (click)="prev(index)" [hidden]="index == 0">
+      <i class='bx bxs-left-arrow icon-prev'></i>
+    </button>
+
+    <button class="btn-next" (click)="next(index)" [hidden]="index == this.pages.length - 1">
+      <i class='bx bxs-right-arrow icon-next'></i>
+    </button>
+
+  </div>
+
+

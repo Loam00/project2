@@ -1,0 +1,37 @@
+.navbar {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(100deg, #6a1814, #6f2e0e);
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 1px 10px 5px #6f2e0e;
+  z-index: 10;
+  position: relative;
+}
+
+.navbar-link {
+  color: white;
+  font-weight: 600;
+  margin: 5px;
+  height: 100%;
+  background: linear-gradient(270deg, white 50%, transparent 50%);
+  background-size: 200% 100%;
+  border: 2px solid white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.navbar-link:hover {
+  color: #353232;
+  background-position: -100% 0;
+}
+
+
